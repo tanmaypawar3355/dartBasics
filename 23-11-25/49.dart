@@ -21,7 +21,10 @@ void main() {
 
   obj1.empInfo();
   obj2.empInfo();
+
 }
+
+
 
 
 /*
