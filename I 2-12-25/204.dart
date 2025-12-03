@@ -1,23 +1,25 @@
 // Iterable class
 
-// 7] followedBy(iterable <E> other) --> iterable<E>
-// Creates a lazy concatenation of this iterable & other.
+// 7] fold<T> (T initialValue, T combine (t previousValue, E element)) --> T
+// Reduces a collection to a single value by iterating combining each element
+// of the collection with an existing value.
 
 void main() {
   var players = ["Rohit", "Shubhman", "Virat", "KL", "Shreyas", "Hardik"];
 
-  var retVal = players.followedBy(["Ravindra", "Bumrah"]);
+  var initiValue = " ";
 
+  var retVal = players.fold(initiValue, (preVal, player) => preVal + player);
   print(retVal);
-  print(players);
 }
 
 /*
 
 Output:
 
-(Rohit, Shubhman, Virat, KL, Shreyas, Hardik, Ravindra, Bumrah)
-[Rohit, Shubhman, Virat, KL, Shreyas, Hardik]
+
+ RohitShubhmanViratKLShreyasHardik
+
 
 
 */

@@ -1,23 +1,22 @@
 // Iterable class
 
-// 11] reduce (E combine(E value, E element)) --> E
-// Reduces a collection to a single value by iteratively combining elements of the collection
-// using the provided function.
+// 11] map<T> (T toElement (E e)) --> Iterable<T>
+// The current elements of this iterable modified by toElement.
 
 void main() {
   var players = ["Rohit", "Shubhman", "Virat", "KL", "Shreyas", "Hardik"];
 
-  var retVal = players.reduce((value, player) => "10" + player);
+  var retVal = players.map((player) => player + " Ind");
   print(retVal);
 }
+
 
 /*
 
 Output:
 
 
-10Hardik
-
+(Rohit Ind, Shubhman Ind, Virat Ind, KL Ind, Shreyas Ind, Hardik Ind)
 
 
 

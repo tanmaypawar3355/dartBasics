@@ -1,23 +1,24 @@
 // Iterable class
 
-// 13] skip (int count) --> Iterable<E>
-// Creates an iterable that provides all but the first count elements.
+// 13]singleWhere (bool test(E element), {E orElse()?}) --> E
+// The single element that satisfies test.
 
 void main() {
   var players = ["Rohit", "Shubhman", "Virat", "KL", "Shreyas", "Hardik"];
 
-  var retVal = players.skip(4);
+  var retVal = players.singleWhere((player) => player.length == 6);
 
   print(retVal);
 }
+
+
 
 /*
 
 Output:
 
 
-(Shreyas, Hardik)
-
+Hardik
 
 
 */

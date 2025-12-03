@@ -1,25 +1,21 @@
 // Iterable class
 
-// 6] fold<T> (T initialValue, T combine (t previousValue, E element)) --> T
-// Reduces a collection to a single value by iterating combining each element
-// of the collection with an existing value.
+// 6] lastWhere (bool test(E element),{E or Else()?}) --> E
+// The last element that satisfies the given predicate value.
 
 void main() {
   var players = ["Rohit", "Shubhman", "Virat", "KL", "Shreyas", "Hardik"];
 
-  var initiValue = " ";
-
-  var retVal = players.fold(initiValue, (preVal, player) => preVal + player);
+  var retVal = players.lastWhere((player) => player[0] == "S");
   print(retVal);
 }
+
 
 /*
 
 Output:
 
-
- RohitShubhmanViratKLShreyasHardik
-
+Shreyas
 
 
 */

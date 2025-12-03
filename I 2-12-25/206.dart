@@ -1,13 +1,12 @@
 // Iterable class
 
-// 9] join([String separator = " "]) --> String
-// Converts each element to a String & concatenates the Strings.
+// 9] forEach(void action (E element)) --> void
+// Invokes action of each element of this iterable in iteration order.
 
 void main() {
   var players = ["Rohit", "Shubhman", "Virat", "KL", "Shreyas", "Hardik"];
 
-  var retVal = players.join("----->");
-  print(retVal);
+  var retVal = players.forEach(print);
 }
 
 
@@ -16,8 +15,12 @@ void main() {
 Output:
 
 
-Rohit----->Shubhman----->Virat----->KL----->Shreyas----->Hardik
-
+Rohit
+Shubhman
+Virat
+KL
+Shreyas
+Hardik
 
 
 

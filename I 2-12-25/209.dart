@@ -1,24 +1,24 @@
 // Iterable class
 
-// 12]singleWhere (bool test(E element), {E orElse()?}) --> E
-// The single element that satisfies test.
+// 12] reduce (E combine(E value, E element)) --> E
+// Reduces a collection to a single value by iteratively combining elements of the collection
+// using the provided function.
 
 void main() {
   var players = ["Rohit", "Shubhman", "Virat", "KL", "Shreyas", "Hardik"];
 
-  var retVal = players.singleWhere((player) => player.length == 6);
-
+  var retVal = players.reduce((value, player) => "10" + player);
   print(retVal);
 }
-
-
 
 /*
 
 Output:
 
 
-Hardik
+10Hardik
+
+
 
 
 */

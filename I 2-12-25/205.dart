@@ -1,27 +1,23 @@
 // Iterable class
 
-// 8] forEach(void action (E element)) --> void
-// Invokes action of each element of this iterable in iteration order.
+// 8] followedBy(iterable <E> other) --> iterable<E>
+// Creates a lazy concatenation of this iterable & other.
 
 void main() {
   var players = ["Rohit", "Shubhman", "Virat", "KL", "Shreyas", "Hardik"];
 
-  var retVal = players.forEach(print);
-}
+  var retVal = players.followedBy(["Ravindra", "Bumrah"]);
 
+  print(retVal);
+  print(players);
+}
 
 /*
 
 Output:
 
-
-Rohit
-Shubhman
-Virat
-KL
-Shreyas
-Hardik
-
+(Rohit, Shubhman, Virat, KL, Shreyas, Hardik, Ravindra, Bumrah)
+[Rohit, Shubhman, Virat, KL, Shreyas, Hardik]
 
 
 */
