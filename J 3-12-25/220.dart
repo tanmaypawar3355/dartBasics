@@ -1,0 +1,22 @@
+// Exception handling
+
+import 'dart:io';
+
+void main() {
+  int? x = int.parse(stdin.readLineSync()!);
+  int? y = int.parse(stdin.readLineSync()!);
+
+  double ans = x / y;
+  print(ans);
+}
+
+/*
+
+Output:
+
+10      // By user
+2       // By user
+5.0
+
+
+*/
